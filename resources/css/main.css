@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Montserrat;
+    color: white;
+}
+
+img {
+    height: 100%;
+}
+
+.page {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas: 
+    "header header"
+    "info image"
+    "footer footer";
+}
+
+.page1 {
+    background-color: #CE0B1E;
+}
+
+.content {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image{
+    grid-area: image;
+    height: 600px;
+
+}
+
+.page1 .image {
+    background-image: url("../images/revolt-164_6wVEHfI-unsplash.jpg");
+    background-size: cover;
+}
+
+
+
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 120px;
+
+}
+
+h3 {
+    font-weight: 400;
+    opacity: 0.8;
+    margin-bottom: 50px;
+}
+
+.colors {
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.circle1 {
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+.circle2 {
+    height: 50px;
+    width: 50px;
+    background-color: blue;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+.circle3 {
+    height: 50px;
+    width: 50px;
+    background-color: #4EBE35;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+.button {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 110%;
+    background-color: white;
+    padding: 18px 40px;
+    border-radius: 50px;
+}
+
+.page1 .button {
+    color: #CE0B1E;
+}
+
+#fp-nav span {
+    background: #949393 !important;
+}
+
+#fp-nav ul li a.active span {
+    background: white !important;
+}
+
+
+.page2 {
+    background-color: #148BFF;
+}
+.page2 .button {
+    color: #148BFF;
+}
+
+.page2 .image {
+    background-image: url("../images/alexander-rotker-l8p1aWZqHvE-unsplash.jpg");
+    background-size: cover;
+}
+
+.page3 {
+    background-color: #67E949;
+}
+.page3 .button {
+    color: #4EBE35;
+}
+
+.page3 .image {
+    background-image: url("../images/Nike-Sports-Shoe-Mockup.jpg");
+    background-size: cover;
+}
+
+@media only screen and (max-width: 500px) {
+    .page {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 80px;
+    }
+
+    h3, .button {
+        font-size: 85%;
+    }
+
+    h3, .colors {
+        margin-bottom: 25px;
+    }
+
+    .button {
+        padding: 10px 30px;
+    }
+
+    .content{
+        flex: 1;
+        justify-content: center;
+    }
+
+    .image {
+        flex: 1;
+        background-position-x: center;
+    }
+} 
